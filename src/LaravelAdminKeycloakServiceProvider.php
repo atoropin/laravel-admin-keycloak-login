@@ -28,9 +28,9 @@ class LaravelAdminKeycloakServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/../config/laravel_admin_keycloak.php' => config_path('laravel_admin_keycloak.php')
-        ]);
+        $this->publishes([__DIR__.'/../config' => config_path()]);
+
+        $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')]);
 
         $this->bootAdminKeycloakSocialite();
 
