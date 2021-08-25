@@ -1,0 +1,27 @@
+{
+  "name": "rusatom/laravel-admin-keycloak-login",
+  "description": "Logging in Laravel-admin through Keycloak user account.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrey Toropin",
+      "email": "AAToropin@rusatom-utilities.ru"
+    }
+  ],
+  "require": {
+    "laravel/framework": "^6|^8.*",
+    "encore/laravel-admin": "^1.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rusatom\\LaravelAdminKeycloak\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Rusatom\\LaravelAdminKeycloak\\LaravelAdminKeycloakServiceProvider"
+      ]
+    }
+  }
+}
