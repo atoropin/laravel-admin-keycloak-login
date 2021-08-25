@@ -3,8 +3,10 @@
 
 namespace Rusatom\LaravelAdminKeycloak;
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\ServiceProvider;
 
-class LaravelAdminKeycloakServiceProvider
+class LaravelAdminKeycloakServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
