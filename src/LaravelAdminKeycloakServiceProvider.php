@@ -4,9 +4,6 @@
 namespace Rusatom\LaravelAdminKeycloak;
 
 
-use SocialiteProviders\Keycloak\Provider as KeycloakProvider;
-use SocialiteProviders\Manager\Config as SocialiteConfig;
-
 class LaravelAdminKeycloakServiceProvider
 {
     /**
@@ -58,13 +55,13 @@ class LaravelAdminKeycloakServiceProvider
             'laravel_admin_keycloak',
             function ($app) use ($socialite) {
                 $config = $app['config']['services.keycloak_admin'];
-                $configClass = new SocialiteConfig(
+                $configClass = new \SocialiteProviders\Manager\Config(
                     $app['config']['laravel_admin_keycloak.client_id'],
                     $app['config']['laravel_admin_keycloak.client_secret'],
                     $app['config']['laravel_admin_keycloak.redirect'],
                     $app['config']['laravel_admin_keycloak']
                 );
-                return $socialite->buildProvider(KeycloakProvider::class, $config)
+                return $socialite->buildProvider(\SocialiteProviders\Keycloak\Provider::class, $config)
                     ->setConfig($configClass);
             }
         );
