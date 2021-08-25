@@ -10,7 +10,8 @@
   ],
   "require": {
     "laravel/framework": "^6|^8",
-    "encore/laravel-admin": "^1.8"
+    "encore/laravel-admin": "^1.8",
+    "socialiteproviders/providers": "*"
   },
   "autoload": {
     "psr-4": {
