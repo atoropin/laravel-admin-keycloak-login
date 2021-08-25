@@ -59,7 +59,7 @@ class LaravelAdminKeycloakServiceProvider extends ServiceProvider
         $socialite->extend(
             'laravel_admin_keycloak',
             function ($app) use ($socialite) {
-                $config = $app['config']['services.keycloak_admin'];
+                $config = $app['config']['laravel_admin_keycloak'];
                 $configClass = new SocialiteConfig(
                     $app['config']['laravel_admin_keycloak.client_id'],
                     $app['config']['laravel_admin_keycloak.client_secret'],
