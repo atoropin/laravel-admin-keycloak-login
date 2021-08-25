@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelAdminKeycloak;
+namespace Rusatom\LaravelAdminKeycloak;
 
 
 use SocialiteProviders\Keycloak\Provider as KeycloakProvider;

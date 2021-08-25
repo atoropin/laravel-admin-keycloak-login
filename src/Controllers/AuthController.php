@@ -1,10 +1,10 @@
 <?php
 
 
-namespace LaravelAdminKeycloak\Controllers;
+namespace Rusatom\LaravelAdminKeycloak\Controllers;
 
 
-use LaravelAdminKeycloak\Services\AdminSocialAccountService;
+use Rusatom\LaravelAdminKeycloak\Services\AdminSocialAccountService;
 use Encore\Admin\Controllers\AuthController as BaseAuthController;
 use Laravel\Socialite\Contracts\Factory as Socialite;
 use Illuminate\Http\Request;

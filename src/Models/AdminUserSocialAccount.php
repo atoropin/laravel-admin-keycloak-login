@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelAdminKeycloak\Models;
+namespace Rusatom\LaravelAdminKeycloak\Models;
 
 
 use Encore\Admin\Auth\Database\Administrator;
