@@ -32,7 +32,7 @@ class LaravelAdminKeycloakServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')]);
 
-        $this->bootAdminKeycloakSocialite();
+        $this->bootLaravelAdminKeycloakSocialite();
 
         $this->registerRoutes();
     }
@@ -44,7 +44,7 @@ class LaravelAdminKeycloakServiceProvider extends ServiceProvider
      */
     private function registerRoutes()
     {
-        Route::namespace('Rusatom\LaravelAdminKeycloak\Controllers')
+        Route::namespace('Rusatom\LaravelAdminKeycloak\Admin\Controllers')
             ->group(function () {
                 $this->loadRoutesFrom(__DIR__ . '/routes.php');
             });
@@ -53,7 +53,7 @@ class LaravelAdminKeycloakServiceProvider extends ServiceProvider
     /**
      * Extend Socialite config for Laravel-admin login.
      */
-    private function bootAdminKeycloakSocialite()
+    private function bootLaravelAdminKeycloakSocialite()
     {
         $socialite = $this->app->make('Laravel\Socialite\Contracts\Factory');
         $socialite->extend(

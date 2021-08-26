@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Rusatom\LaravelAdminKeycloak\Controllers;
+namespace Rusatom\LaravelAdminKeycloak\Admin\Controllers;
 
 
 use Rusatom\LaravelAdminKeycloak\Services\AdminSocialAccountService;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Rusatom\LaravelAdminKeycloak\Models;
+namespace Rusatom\LaravelAdminKeycloak\Admin\Models;
 
 
 use Encore\Admin\Auth\Database\Administrator;
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
 /**
- * LaravelAdminKeycloak\Models\AdminUserSocialAccount
+ * Rusatom\LaravelAdminKeycloak\Admin\Models\AdminUserSocialAccount
  *
  * @property int $id
  * @property int $admin_user_id

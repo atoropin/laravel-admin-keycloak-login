@@ -5,7 +5,7 @@ namespace Rusatom\LaravelAdminKeycloak\Services;
 
 
 use Encore\Admin\Auth\Database\Administrator;
-use Rusatom\LaravelAdminKeycloak\Models\AdminUserSocialAccount;
+use Rusatom\LaravelAdminKeycloak\Admin\Models\AdminUserSocialAccount;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Socialite\Contracts\User;
 

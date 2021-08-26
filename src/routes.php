@@ -3,5 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('admin/login/{provider}/callback', 'AuthController@callback');
-Route::get('admin/login/form', 'AuthController@getLoginForm');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('login/{provider}/callback', 'AuthController@callback');
+    Route::get('login/form', 'AuthController@getLoginForm');
+});

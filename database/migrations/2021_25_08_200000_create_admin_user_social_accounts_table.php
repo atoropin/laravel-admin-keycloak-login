@@ -18,7 +18,7 @@ class CreateAdminUserSocialAccountsTable extends Migration
             $table->integer('admin_user_id');
             $table->string('provider_user_id');
             $table->string('provider');
-            $table->json('provider_user_data');
+            $table->json('provider_user_data')->nullable();
             $table->text('access_token')->nullable();
             $table->timestamps();
         });
