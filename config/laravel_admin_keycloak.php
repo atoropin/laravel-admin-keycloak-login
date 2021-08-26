@@ -18,6 +18,6 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'redirect'      => env('APP_URL').'/admin/login/keycloak/callback'
+    'redirect'      => env('APP_URL').'/admin/login/la_keycloak/callback'
 
 ];
