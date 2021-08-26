@@ -16,7 +16,8 @@ class AdminSocialAccountService extends ServiceProvider
         $account = AdminUserSocialAccount::whereProvider($providerName)
             ->whereProviderUserId($providerUser->getId())
             ->first();
-        $userData = \json_encode($providerUser->user, JSON_UNESCAPED_UNICODE);
+
+        $userData = json_encode($providerUser->user, JSON_UNESCAPED_UNICODE);
 
         $adminUser = Administrator::whereEmail($providerUser->getEmail())->first();
 
@@ -37,6 +38,6 @@ class AdminSocialAccountService extends ServiceProvider
 
         $account->save();
 
-        return $account->adminUser;
+        return $account->adminUser()->first();
     }
 }

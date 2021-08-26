@@ -39,7 +39,7 @@ class AuthController extends BaseAuthController
             return redirect($this->redirectPath());
         }
 
-        if (config('laravel_admin_keycloak.client_id') !== null) {
+        if (!empty(config('laravel_admin_keycloak.client_id'))) {
             return $this->socialite->driver('la_keycloak')->redirect();
         }
 
