@@ -27,6 +27,10 @@ class AddEmailToAdminUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin_users');
+        if (Schema::hasColumn('admin_users', 'email')) {
+            Schema::table('admin_users', function ($table) {
+                $table->dropColumn('email');
+            });
+        }
     }
 }
